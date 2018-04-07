@@ -13,4 +13,10 @@ public class Lista {
         n.setSiguiente(this.primero);
         this.primero = n;
     }
+
+    public Nodo pop(){
+        Nodo retorno = this.primero;
+        this.primero = this.primero.getSiguiente();
+        return retorno;
+    }
 }
