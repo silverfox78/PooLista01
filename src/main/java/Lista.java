@@ -15,8 +15,16 @@ public class Lista {
     }
 
     public Nodo pop(){
+        if (this.primero.equals(null)){
+            return null;
+        }
         Nodo retorno = this.primero;
+        retorno.setSiguiente(null);
         this.primero = this.primero.getSiguiente();
         return retorno;
+    }
+
+    public Nodo peek(){
+        return this.primero;
     }
 }
